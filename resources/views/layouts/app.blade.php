@@ -24,10 +24,12 @@
     <div id="app">     
         <div class="container">
             @include('include/navbar')
-            @include('include/messages')
             {{-- @include('include/sidebar') --}}
-            <main class="container" style='min-height: 660px'>
+            <main class="container-fluid rounded shadow py-2 my-3" style='min-height: 660px'>
                 @yield('content')
+                    <div class="text-center">
+                        @include('include/messages')
+                    </div>           
             </main>
             @include('include/footer')
         </div>

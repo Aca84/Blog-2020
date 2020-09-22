@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Posts;
-use App\Models\User;
+use DB;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -27,7 +27,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Posts::orderBy('created_at','desc')->simplePaginate(5);
+        // $posts = Posts::orderBy('created_at','desc')->simplePaginate(5);
+        $posts = Posts::orderBy('created_at','desc')->paginate(5);
+
         return view('posts.index')->with('posts', $posts);
     }
 

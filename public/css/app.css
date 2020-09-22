@@ -10900,6 +10900,18 @@ a.text-dark:focus {
 }
 
 body {
-  background: #f3f8f3 !important;
+  background: black !important;
+}
+
+.container {
+  background: #f7f7f7;
+}
+
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  background: white;
 }
 
