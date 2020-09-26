@@ -9,3 +9,21 @@ body{
 .container-fluid{
     background: rgb(255, 255, 255);
 }
+
+.text {
+    // display: block;
+    text-overflow: ellipsis;
+    // white-space: normal;
+    text-align: left;
+    text-indent: 10px;
+    word-break: break-all;
+    overflow: hidden;
+    line-clamp: 5;
+    // height: 200px;
+    // overflow-wrap: break-word;
+
+  }
+  .text::first-letter{
+    font-size: 50px;
+  }
+

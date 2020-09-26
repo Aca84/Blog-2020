@@ -21,12 +21,15 @@
 
           <div class="card my-3 p-3 shadow" style="width: 100%;">
 
-            <div class="card-title bg-transparent border-secondary mx-2">
+            <div class="card-header bg-transparent mx-2">
               <h3><a class="text-decoration-none" href="/posts/{{$post->id}} ">{{$post->title}}</a></h3>
             </div>
             
-            <div class="my-2 p-3 text-justify" style="max-width: 100%;">
-              <p class="card-text text-sm-justify text-break"> {{$post->body}}</p>           
+            <div class="text my-2 p-3 text-justify" style="max-width: 100%;">
+              <p class="text"> 
+                {{$post->body}}
+                <a href="#">More..</a>
+              </p>            
               <small class="text-muted">Written by {{$post->user->name}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
             </div>
 

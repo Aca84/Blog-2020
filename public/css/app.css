@@ -10915,3 +10915,16 @@ body {
   background: white;
 }
 
+.text {
+  text-overflow: ellipsis;
+  text-align: left;
+  text-indent: 10px;
+  word-break: break-all;
+  overflow: hidden;
+  line-clamp: 5;
+}
+
+.text::first-letter {
+  font-size: 50px;
+}
+
