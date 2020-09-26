@@ -25,7 +25,7 @@
         <div class="container">
             @include('include/navbar')
             {{-- @include('include/sidebar') --}}
-            <main class="container-fluid rounded shadow py-2 my-3" style='min-height: 660px'>
+            <main class="container-fluid rounded shadow py-2 my-3" style='min-height: 800px'>
                 @yield('content')
                     <div class="text-center">
                         @include('include/messages')

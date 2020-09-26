@@ -1,8 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+    {{-- datum --}}
+    {{date('d-m-yy')}}
+    {{-- search forma --}}
+    <form class="form-inline my-2 my-lg-0 justify-content-end" method="GET" action="{{ route('search') }}">
+      <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search" name="query" id="query">
+      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+    </form>
     {{-- prikazivanje svih postova u index-u --}}
-
     @if (count($posts)>0) 
         @foreach ( $posts as $post)
         {{-- <div class="card  my-3 mb-3 shadow" style="width: 100%;">

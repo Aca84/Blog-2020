@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+
 
 
 /*
@@ -45,4 +47,6 @@ use Illuminate\Support\Facades\Auth;
  Auth::routes();
  
  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+ Route::get('/search', [App\Http\Controllers\PostsController::class, 'search'])->name('search');
+
 

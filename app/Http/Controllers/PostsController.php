@@ -33,6 +33,19 @@ class PostsController extends Controller
         return view('posts.index')->with('posts', $posts);
     }
 
+    // function for searching the posts
+    public function search(Request $request){
+
+        $request->validate(
+            ['query'=>'required|min:1']
+        );
+
+        $query = $request->input('query');
+
+        $posts = Posts::where('title', 'like', "%$query%")->get();
+        return view('search')->with('posts', $posts);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -142,4 +155,5 @@ class PostsController extends Controller
 
         return redirect('/posts')->with('success','Post deleted');
     }
+
 }
