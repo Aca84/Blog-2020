@@ -1,13 +1,22 @@
 body{
-    background: black !important ;
+    background: rgb(230, 230, 230) !important ;
+    scroll-behavior: smooth;
 }
 
+.navbar{
+    height: 100px !important;
+}
+
+.footer{
+    height: 150px !important;
+}
 .container{
     background: rgb(247, 247, 247);
 }
 
 .container-fluid{
     background: rgb(255, 255, 255);
+    margin-top: 100px !important;
 }
 
 .text {
@@ -22,8 +31,16 @@ body{
     // height: 200px;
     // overflow-wrap: break-word;
 
-  }
-  .text::first-letter{
+}
+.text::first-letter{
     font-size: 50px;
-  }
+}
+
+.nav-src{
+    width: 90px !important;
+}
+.nav-src:hover{
+    width: 300px !important;
+    transition: width 1s;
+}
 

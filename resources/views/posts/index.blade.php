@@ -2,11 +2,11 @@
 
 @section('content')
     {{-- datum --}}
-    {{date('d-m-yy')}}
+    {{-- {{date('d-m-yy')}} --}}
     {{-- search forma --}}
     <form class="form-inline my-2 my-lg-0 justify-content-end" method="GET" action="{{ route('search') }}">
-      <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search" name="query" id="query">
-      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+      <input class="nav-src form-control mr-sm-2 " type="search" placeholder="Search" name="query" id="query">
+      <button class="btn btn-outline-info my-1 my-sm-0" type="submit">Search</button>
     </form>
     {{-- prikazivanje svih postova u index-u --}}
     @if (count($posts)>0) 
@@ -21,7 +21,7 @@
 
           <div class="card my-3 p-3 shadow" style="width: 100%;">
 
-            <div class="card-header bg-transparent mx-2">
+            <div class="card-header bg-transparent">
               <h3><a class="text-decoration-none" href="/posts/{{$post->id}} ">{{$post->title}}</a></h3>
             </div>
             

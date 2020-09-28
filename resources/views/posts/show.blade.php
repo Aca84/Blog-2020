@@ -1,16 +1,16 @@
--@extends('layouts.app')
+@extends('layouts.app')
 @section('content')
-<a href="/posts" class="btn-sm btn-secondary px-3">Back</a>
+<a href="/posts" class="btn-sm btn-secondary px-3 my-2">Back</a>
 
 <div class="card my-3 shadow" style="max-width: 100%;">
-    <div class="card-header bg-transparent border-secondary mx-2">
+    <div class="card-header bg-transparent">
         <h3>{{$post->title}}</h3>
     </div>
-    <div class="my-5 p-3 text-justify" style="max-width: 100%;">
+    <div class="text my-5 p-3 text-justify" style="max-width: 100%;">
         {!!$post->body!!}
     </div>
     <small class="text-muted p-3">Written by {{$post->user->name}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
-    <div class="card-footer bg-transparent border-info mx-2">
+    <div class="card-footer bg-transparent mx-2">
         {{-- Checking if is guest and if is loged user rights to edit/delete --}}
         @if (!Auth::guest())
         @if (Auth::user()->id == $post->user_id)

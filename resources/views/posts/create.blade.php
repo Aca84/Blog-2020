@@ -13,7 +13,7 @@
         {{Form::label('body', 'Body')}}  
         {{Form::textarea('body','',['class' => 'form-control','placeholder'=>'Body text', 'w-70'])}}  
     </div>
-        {{Form::submit('Publish!',['class'=> 'btn btn-outline-success w-100'])}}    
+        {{Form::submit('Publish!',['class'=> 'btn btn-outline-success w-25 float-right'])}}    
         {!! Form::close() !!}
 </div>
 @endsection

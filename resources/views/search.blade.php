@@ -12,7 +12,7 @@
             </div>
         </div>
     </form> --}}
-            <h3 class="my-2">Search results</h3>
+            <h3 class="my-3">Search results</h3>
                 {{-- prikazivanje broja nadjenih postova --}}
                 <p>{{$posts->count()}} result's for '{{request()->input('query')}}' </p>
 
@@ -34,7 +34,7 @@
             @endforeach
         @else
         <tr>
-            <td colspan="3" class="text-danger my-3">Result not found.</td>
+            <td colspan="3" class="text-danger py-5"><h4>Result not found.</h4></td>
         </tr>
         @endif
         {{-- {{ $posts->links() }} --}}

@@ -33,7 +33,7 @@ class PostsController extends Controller
         return view('posts.index')->with('posts', $posts);
     }
 
-    // function for searching the posts
+    // ** function for searching the posts **//
     public function search(Request $request){
 
         $request->validate(

@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-info p-2 sticky-top rounded-bottom">
-      <a class="navbar-brand" href="{{ url('/posts') }}">
-          {{ config('app.name', 'Blog 2020') }}
+      <a class="navbar-brand font-italic ml-2" href="{{ url('/posts') }}">
+          <h3>{{ config('app.name', 'Blog 2020') }}</h3>
       </a>
+      
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -13,6 +14,7 @@
           </ul>
           <!-- Right Side Of Navbar -->
           <ul class="navbar-nav ml-auto">
+              
               <!-- Authentication Links -->
               @guest
                   <li class="nav-item">
@@ -29,7 +31,7 @@
                           {{ Auth::user()->name }}
                       </a>
                       {{-- Dropdown for loged user --}}
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <div class="dropdown-menu dropdown-menu-right">
                           <a class="dropdown-item" href="/posts/create">Create</a>
                           <a class="dropdown-item" href="/home">Dashboard</a>
                           {{-- Logout --}}

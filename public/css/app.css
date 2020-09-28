@@ -10900,7 +10900,16 @@ a.text-dark:focus {
 }
 
 body {
-  background: black !important;
+  background: #e6e6e6 !important;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  height: 100px !important;
+}
+
+.footer {
+  height: 150px !important;
 }
 
 .container {
@@ -10913,6 +10922,7 @@ body {
 .container-lg,
 .container-xl {
   background: white;
+  margin-top: 100px !important;
 }
 
 .text {
@@ -10926,5 +10936,14 @@ body {
 
 .text::first-letter {
   font-size: 50px;
+}
+
+.nav-src {
+  width: 90px !important;
+}
+
+.nav-src:hover {
+  width: 300px !important;
+  transition: width 1s;
 }
 
