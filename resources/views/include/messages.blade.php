@@ -6,11 +6,11 @@
     @endforeach
 @endif
 
-{{-- @if (session('success'))
+@if (session('success'))
         <div class="alert alert-success my-2 w-25 text-center">
             {{session('success')}}
         </div>  
-@endif --}}
+@endif
 
 @if (session('error'))
         <div class="alert alert-danger my-2 w-75 text-center mx-auto">      

@@ -10904,12 +10904,17 @@ body {
   scroll-behavior: smooth;
 }
 
-.navbar {
-  height: 100px !important;
-}
-
 .footer {
   height: 150px !important;
+}
+
+.col-12 {
+  position: bottom;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
 
 .container {
@@ -10926,12 +10931,13 @@ body {
 }
 
 .text {
-  text-overflow: ellipsis;
   text-align: left;
-  text-indent: 10px;
-  word-break: break-all;
   overflow: hidden;
-  line-clamp: 5;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 .text::first-letter {

@@ -3,13 +3,22 @@ body{
     scroll-behavior: smooth;
 }
 
-.navbar{
-    height: 100px !important;
-}
-
+// futter
 .footer{
     height: 150px !important;
 }
+.row{
+    // height: 130px !important;
+}
+.col-12{
+  position: bottom;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+// end footer
 .container{
     background: rgb(247, 247, 247);
 }
@@ -18,24 +27,22 @@ body{
     background: rgb(255, 255, 255);
     margin-top: 100px !important;
 }
-
+// text post
 .text {
-    // display: block;
-    text-overflow: ellipsis;
-    // white-space: normal;
     text-align: left;
-    text-indent: 10px;
-    word-break: break-all;
+    //copied from sackO
     overflow: hidden;
-    line-clamp: 5;
-    // height: 200px;
-    // overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
 
 }
 .text::first-letter{
     font-size: 50px;
 }
-
+// End text post
+// Search bar 
 .nav-src{
     width: 90px !important;
 }
@@ -43,4 +50,4 @@ body{
     width: 300px !important;
     transition: width 1s;
 }
-
+// end Searchbar

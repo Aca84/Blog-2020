@@ -77,9 +77,7 @@ class PostsController extends Controller
         $post->user_id = auth()->user()->id;
         $post-> save();
 
-        return redirect('/posts')->with('success', 'Post created!');
-
-
+        return redirect('/posts');
     }
  
     /**
@@ -133,7 +131,7 @@ class PostsController extends Controller
         $post->body = $request->input('body');
         $post-> save();
 
-        return redirect('/posts')->with('success', 'Post updated!');
+        return redirect('/home')->with('success', 'Post updated!');
     }
 
     /**

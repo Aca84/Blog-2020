@@ -2,17 +2,18 @@
 
 @section('content')
     <div class="my-5" style="max-width: 100%;">
-        {{-- Dugme za kreiranje posta i ciji su postovi --}}
-        <div class=" card-header text-center">
+        <div class="card-header bg-transparent text-center border-0 rounded">
             @if (session('status'))
                 <div class="alert alert-success" role="alert">       
                     {{ session('status') }}
                 </div>
             @endif
+                {{-- Button dor create post --}}
                 <a class="btn btn-outline-secondary float-right" href="/posts/create">Create</a>
-                    <h5 class="my-2"><small>Ukupno postova {{$posts->count()}} by</small>   {{ __(Auth::user()->name) }}</h5>
+                {{-- Ukupno postova user-a --}}
+                <h5 class="my-2"><small>Ukupno postova {{$posts->count()}} by</small>   {{ __(Auth::user()->name) }}</h5>
         </div>
-        {{-- <hr> --}}
+        {{-- Prikaz postova user-a --}}
         <div class="">
             @foreach ($posts as $p)
             <div class="card mb-5 shadow" style="max-width: 100%;">
@@ -31,6 +32,7 @@
             </div>
                 
                 {{-- <div class="text-center mb-3 text-secondary">{{$posts->links()}}</div> --}}
+                {{-- {{$posts->links()}} --}}
             @endforeach
         </div>
     </div> 

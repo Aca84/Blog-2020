@@ -1,20 +1,19 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-info p-2 sticky-top rounded-bottom">
       <a class="navbar-brand font-italic ml-2" href="{{ url('/posts') }}">
           <h3>{{ config('app.name', 'Blog 2020') }}</h3>
+          
       </a>
       
+      {{-- Dropdown for user meni --}}
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
           <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Left Side Of Navbar -->
-          <ul class="navbar-nav mr-auto">
-
+          <ul class="navbar-nav mr-auto">            
           </ul>
           <!-- Right Side Of Navbar -->
           <ul class="navbar-nav ml-auto">
-              
               <!-- Authentication Links -->
               @guest
                   <li class="nav-item">
@@ -40,7 +39,6 @@
                                            document.getElementById('logout-form').submit();">
                               {{ __('Logout') }}
                           </a>
-
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                               @csrf
                           </form>

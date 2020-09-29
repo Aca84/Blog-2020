@@ -28,8 +28,9 @@
             <div class="text my-2 p-3 text-justify" style="max-width: 100%;">
               <p class="text"> 
                 {{$post->body}}
-                <a href="#">More..</a>
-              </p>            
+                {{-- <a href="#">More..</a> --}}
+              </p>        
+              <a href="#">More..</a>    
               <small class="text-muted">Written by {{$post->user->name}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
             </div>
 
