@@ -5,7 +5,7 @@
     {{-- {{date('d-m-yy')}} --}}
     {{-- search forma --}}
     <form class="form-inline my-2 my-lg-0 justify-content-end" method="GET" action="{{ route('search') }}">
-      <input class="nav-src form-control mr-sm-2 " type="search" placeholder="Search" name="query" id="query">
+      <input class="nav-src form-control mr-sm-2" type="search" placeholder="Search" name="query" id="query">
       <button class="btn btn-outline-info my-1 my-sm-0" type="submit">Search</button>
     </form>
     {{-- prikazivanje svih postova u index-u --}}
@@ -18,26 +18,24 @@
             <small class="text-muted">Written by {{$post->user->name}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
             </div>
           </div> --}}
-
           <div class="card my-3 p-3 shadow" style="width: 100%;">
 
             <div class="card-header bg-transparent">
-              <h3><a class="text-decoration-none" href="/posts/{{$post->id}} ">{{$post->title}}</a></h3>
+              <h3><a class="text-decoration-none text-dark" href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
             </div>
             
             <div class="text my-2 p-3 text-justify" style="max-width: 100%;">
               <p class="text"> 
                 {{$post->body}}
-                {{-- <a href="#">More..</a> --}}
               </p>        
-              <a href="#">More..</a>    
-              <small class="text-muted">Written by {{$post->user->name}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
+              <a href="/posts/{{$post->id}}">Read more</a>         
             </div>
+            <small class="text-muted my-2 p-3">Written by {{$post->user->name}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
 
           </div>
         @endforeach
-        <div class="pagination justify-content-center">{{$posts->links()}}</div>     
-        {{-- {{$posts->links()}} --}}
+          <div class="pagination justify-content-center">{{$posts->links()}}</div>     
+          {{-- {{$posts->links()}} --}}
     @else
        <p><i>No posts for now</i></p>     
     @endif

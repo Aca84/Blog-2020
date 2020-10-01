@@ -10904,8 +10904,16 @@ body {
   scroll-behavior: smooth;
 }
 
+.navbar {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .footer {
-  height: 150px !important;
+  height: 100px !important;
+}
+
+.row {
+  height: 80px !important;
 }
 
 .col-12 {
@@ -10930,12 +10938,16 @@ body {
   margin-top: 100px !important;
 }
 
+.card {
+  min-height: 300px;
+}
+
 .text {
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
   /* number of lines to show */
   -webkit-box-orient: vertical;
 }
