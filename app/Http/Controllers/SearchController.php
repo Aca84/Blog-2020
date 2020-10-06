@@ -19,11 +19,12 @@ class SearchController extends Controller
     //     return $request->all();
     // }
 
+    //NEPOTREBAN KONTROLER, SVE JE UPOSTCONTROLLER-U
 
-    public function search(Request $request)
-    {
-    	$posts = Posts::search('search')->get();
+    // public function search(Request $request)
+    // {
+    // 	$posts = Posts::search('search')->get();
 
-    }
+    // }
     
 }

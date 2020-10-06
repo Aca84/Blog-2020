@@ -4,8 +4,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,10 +25,14 @@ use Illuminate\Http\Request;
  Route::get('/', 'App\Http\Controllers\PagesController@index');
  Route::get('/about', 'App\Http\Controllers\PagesController@about');
  Route::get('/user', 'App\Http\Controllers\PagesController@user');
+//  Route::get('/admin', 'App\Http\Controllers\Auth\LoginController@admin'); // not found,but found admin
+
  
  Route::resource('posts', 'App\Http\Controllers\PostsController');
  Auth::routes();
  
+//  Route::get('/admin', 'App\Http\Controllers\Auth\LoginController@admin')->name('admin');
+ Route::get('/admin', [App\Http\Controllers\Auth\LoginController::class, 'admin'])->name('admin'); //too many redirect
  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
  Route::get('/search', [App\Http\Controllers\PostsController::class, 'search'])->name('search');
 

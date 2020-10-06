@@ -11,7 +11,7 @@
                 {{-- Button dor create post --}}
                 <a class="btn btn-outline-secondary float-right" href="/posts/create">Create</a>
                 {{-- Ukupno postova user-a --}}
-                <h5 class="my-2"><small>Ukupno postova {{$posts->count()}} by</small>   {{ __(Auth::user()->name) }}</h5>
+                <h5 class="my-2"><small>Ukupno  {{$posts->count()}} post-a by</small>   {{ __(Auth::user()->name) }}</h5>
         </div>
         {{-- Prikaz postova user-a --}}
         <div class="">
