@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-info p-2 sticky-top rounded-bottom">
+<nav class="navbar navbar-expand-md navbar-dark bg-info p-2 sticky-top rounded-bottom shadow">
       <a class="navbar-brand font-italic ml-2" href="{{ url('/posts') }}">
           <h3>{{ config('app.name', 'Blog 2020') }}</h3>
           
@@ -14,6 +14,14 @@
           </ul>
           <!-- Right Side Of Navbar -->
           <ul class="navbar-nav ml-auto">
+            {{-- search polje --}}
+            <form class="form-inline my-2 my-lg-0 justify-content-end mr-3" method="GET" action="{{ route('search') }}">
+                @csrf
+                <input class="nav-src form-control mr-sm-2" type="search" placeholder="Search" name="query" id="query">
+                <button class="btn my-1 my-sm-0" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
               <!-- Authentication Links -->
               @guest
                   <li class="nav-item">

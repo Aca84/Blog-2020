@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use DB;
 use App\Models\Posts;
 use Redirect;
 
@@ -31,6 +32,7 @@ class LoginController extends Controller
      * @var string
      */
 
+    
     // protected $redirectTo = RouteServiceProvider::HOME; 
 
     /**
@@ -77,9 +79,12 @@ class LoginController extends Controller
 
         // dd($posts);
 
-        if (Auth::user()->role == 'admin') {
+        if (Auth::check() && Auth::user()->role == 'admin') {
+            // if (Auth::user(['role']) === 'admin') {
+
 
             return view('/admin', compact('posts'));
+            // return view('/admin')->with('posts', $posts);
         }
             
         if (Auth::user()->role == 'user') {

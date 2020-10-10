@@ -2,13 +2,17 @@ body{
     background: rgb(230, 230, 230) !important ;
     scroll-behavior: smooth;
 }
-//navbar
+// Navbar
 .navbar{
     // font-family: 'Cabin' !important;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+// Icon for search in navbar
+.fa-search{
+    color: white;
+}
 
-// footer
+// Footer
 .footer{
     height: 100px !important;
 }
@@ -24,7 +28,7 @@ body{
   text-align: center;
 //   height: 45px;
 }
-// end footer
+// End footer
 .container{
     background: rgb(247, 247, 247);
 }
@@ -33,12 +37,12 @@ body{
     background: rgb(255, 255, 255);
     margin-top: 100px !important;
 }
-// card
+// Card
 .card{
     min-height: 300px;
 }
 
-// text post
+// Text post
 .text {
     text-align: left;
     // min-height: 150px;
@@ -49,17 +53,21 @@ body{
     -webkit-line-clamp: 5; /* number of lines to show */
     -webkit-box-orient: vertical;
 
+    // transition: transform 2s ease;
 }
 .text::first-letter{
     font-size: 50px;
 }
+// .text:hover{
+//     height: 450px;
+// }
 // End text post
 // Search bar 
 .nav-src{
-    width: 90px !important;
+    width: 89px !important;
 }
 .nav-src:hover{
     width: 300px !important;
     transition: width 1s;
 }
-// end Searchbar
+// End Searchbar

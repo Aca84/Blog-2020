@@ -4,41 +4,36 @@
 <h3 class="text-center">Admin dashboard</h3>
 <hr>
 <h5 class="text-center">Ukupno {{$posts->count()}} post-a</h5>
-
-{{-- @if (count($posts)>0) --}}
+<hr>
+{{-- @if (count($posts ?? '')>0) --}}
 @foreach ($posts as $post)
 
-    <table class="table table-responsive table-hover">
-        <thead>
-            <tr>
-                <th scope="col">{{$post->id}}. {{$post->title}}
-                    <small class="text-muted my-2 p-3">Written by {{$post->user->name}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
-                    <td scope="col">
-                        <ul class="list-group list-group-horizontal">
-                            <li class="list-group-item">
-                                <a href="/posts/{{$post->id}}/edit" class="btn-sm btn-outline-primary mb-2 text-decoration-none">Edit</a>
-                            </li>
-                            <li class="list-group-item">                    
-                                {!!Form::open(['action'=>['App\Http\Controllers\PostsController@destroy', $post->id],'method'=>'POST', 'class' =>  'float-right mr-3'])!!}
-                                {{Form::hidden('_method', 'DELETE' )}}
-                                {{Form::submit('Delete', ['class'=> 'btn-sm btn-outline-danger'])}}
-                                {!!Form::close()!!}
-                            </li>
-                        </ul>
-                    </td>
-                </th>    
-            </tr>
-        </thead>
-        <tbody class="text-wrap text-break">
-            <tr>
-                <td scope="col-12">{{$post->body}}</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="card my-2  shadow" style="width: 100%;">
 
+    <div class="card-header bg-transparent">
+      <h3><a class="text-decoration-none text-dark" href="/posts/{{$post->id}}">{{$post->title}}</a></h3>     
+    </div>
+    
+    <div class="text my-2 p-3 text-justify" style="max-width: 100%;">
+      <p class="text "> 
+        {{$post->body}}
+      </p>        
+      <a href="/posts/{{$post->id}}">Read more</a>         
+    </div>
+
+    <small class="text-muted my-2 p-3">by {{$post->user->name}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
+    
+    <div class="mx-2 mb-1 bg-info rounded p-1">
+        <a href="/posts/{{$post->id}}/edit" class="btn btn-light">Edit</a>
+        {!!Form::open(['action'=>['App\Http\Controllers\PostsController@destroy', $post->id],'method'=>'POST', 'class'=> 'float-right'])!!}
+        {{Form::hidden('_method', 'DELETE' )}}
+        {{Form::submit('Delete', ['class'=> 'btn btn-danger'])}}
+        {!!Form::close()!!}
+    </div>
+
+  </div>
 @endforeach
 {{-- @else --}}
 {{-- <p><i>No posts for now</i></p> --}}
 {{-- @endif --}}
-
 @endsection

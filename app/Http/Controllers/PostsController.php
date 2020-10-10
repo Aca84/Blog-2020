@@ -17,7 +17,7 @@ class PostsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except'=>['index','show']]);
+        $this->middleware('auth', ['except'=>['index','show','search']]);
     }
 
     /**
@@ -75,7 +75,7 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
-        $post-> save();
+        $post->save();
 
         return redirect('/posts');
     }
@@ -102,7 +102,12 @@ class PostsController extends Controller
     {
         $post = Posts::find($id);
 
-        // Check if it logged user auth new
+        if (Auth::user()->role == 'admin') {
+
+            return view('posts/edit')->with('post',$post);
+        }
+
+        // Check if it logged user auth for edit
         if(Auth::user()->id !== $post->user_id){
             return redirect('/posts')->with('error', 'no no no');
         }
@@ -122,14 +127,18 @@ class PostsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required'
-
         ]);
         
         //Create post
         $post = Posts::find($id);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
-        $post-> save();
+        $post->save();
+
+        if (Auth::user()->role == 'admin') { 
+
+            return redirect('/admin')->with('Well done');
+        }
 
         return redirect('/home')->with('success', 'Post updated!');
     }
@@ -144,8 +153,15 @@ class PostsController extends Controller
     {
         $post = Posts::find($id);
 
+        if (Auth::user()->role == 'admin') {
+
+            $post->delete();
+            return redirect('/admin')->with('success','Admin deleted the Post');
+        }
+        
+
         // Check if it logged user auth old
-        if(Auth::user()->id !== $post->user_id){ //new waywith auth included up
+        if(Auth::user()->id !== $post->user_id){  //new way with auth included up
         // if(auth()->user()->id !== $post->user_id){ old way
             return redirect('/posts')->with('error', 'no no no');
         }

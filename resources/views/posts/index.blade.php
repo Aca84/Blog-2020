@@ -4,10 +4,10 @@
     {{-- datum --}}
     {{-- {{date('d-m-yy')}} --}}
     {{-- search forma --}}
-    <form class="form-inline my-2 my-lg-0 justify-content-end" method="GET" action="{{ route('search') }}">
+    {{-- <form class="form-inline my-2 my-lg-0 justify-content-end" method="GET" action="{{ route('search') }}">
       <input class="nav-src form-control mr-sm-2" type="search" placeholder="Search" name="query" id="query">
       <button class="btn btn-outline-info my-1 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> --}}
     {{-- prikazivanje svih postova u index-u --}}
     @if (count($posts)>0) 
         @foreach ( $posts as $post)
@@ -30,7 +30,7 @@
               </p>        
               <a href="/posts/{{$post->id}}">Read more</a>         
             </div>
-            <small class="text-muted my-2 p-3">Written by {{$post->user->name}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
+            <small class="text-muted my-2 p-3">by {{$post->user->name}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
 
           </div>
         @endforeach

@@ -32,7 +32,7 @@ use Illuminate\Http\Request;
  Auth::routes();
  
 //  Route::get('/admin', 'App\Http\Controllers\Auth\LoginController@admin')->name('admin');
- Route::get('/admin', [App\Http\Controllers\Auth\LoginController::class, 'admin'])->name('admin'); //too many redirect
+ Route::get('/admin', [App\Http\Controllers\Auth\LoginController::class, 'admin'])->name('admin'); 
  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
  Route::get('/search', [App\Http\Controllers\PostsController::class, 'search'])->name('search');
 
