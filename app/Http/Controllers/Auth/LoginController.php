@@ -82,12 +82,11 @@ class LoginController extends Controller
         if (Auth::check() && Auth::user()->role == 'admin') {
             // if (Auth::user(['role']) === 'admin') {
 
-
             return view('/admin', compact('posts'));
             // return view('/admin')->with('posts', $posts);
         }
             
-        if (Auth::user()->role == 'user') {
+        if (Auth::check() && Auth::user()->role == 'user') {
             return redirect('/home');
         } 
 
