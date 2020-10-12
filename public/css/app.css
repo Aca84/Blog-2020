@@ -40,7 +40,7 @@ body {
 .container-md,
 .container-sm {
   background: white;
-  margin-top: 100px !important;
+  margin-top: 110px !important;
 }
 
 .card {
@@ -55,10 +55,17 @@ body {
   -webkit-line-clamp: 5;
   /* number of lines to show */
   -webkit-box-orient: vertical;
+  white-space: pre-line;
 }
 
-.text::first-letter {
-  font-size: 50px;
+p.text::first-letter {
+  font-size: 50px !important;
+  font-weight: bold !important;
+}
+
+.text-show {
+  white-space: pre-line;
+  word-break: break-all !important;
 }
 
 .nav-src {

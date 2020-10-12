@@ -1,44 +1,50 @@
-body{
-    background: rgb(230, 230, 230) !important ;
+body {
+    background: rgb(230, 230, 230) !important;
     scroll-behavior: smooth;
 }
+
 // Navbar
-.navbar{
+.navbar {
     // font-family: 'Cabin' !important;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 // Icon for search in navbar
-.fa-search{
+.fa-search {
     color: white;
 }
 
 // Footer
-.footer{
+.footer {
     height: 100px !important;
 }
-.row{
+
+.row {
     height: 80px !important;
 }
-.col-12{
-  position: bottom;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-align: center;
-//   height: 45px;
+
+.col-12 {
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    //   height: 45px;
 }
+
 // End footer
-.container{
+.container {
     background: rgb(247, 247, 247);
 }
 
-.container-fluid{
+.container-fluid {
     background: rgb(255, 255, 255);
-    margin-top: 100px !important;
+    margin-top: 110px !important;
 }
+
 // Card
-.card{
+.card {
     min-height: 300px;
 }
 
@@ -50,25 +56,34 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 5; /* number of lines to show */
+    -webkit-line-clamp: 5;
+    /* number of lines to show */
     -webkit-box-orient: vertical;
+    // Za ispis teksta kako je unet, da ne bude blok
+    white-space: pre-line;
+}
 
-    // transition: transform 2s ease;
-    
+p.text::first-letter {
+    font-size: 50px !important;
+    font-weight: bold !important;
 }
-.text::first-letter{
-    font-size: 50px;
+
+.text-show{
+    // white-space: pre;
+    // word-wrap: break-word;
+    white-space: pre-line;
+    word-break: break-all !important;
 }
-// .text:hover{
-//     height: 450px;
-// }
 // End text post
+
 // Search bar 
-.nav-src{
+.nav-src {
     width: 89px !important;
 }
-.nav-src:hover{
+
+.nav-src:hover {
     width: 300px !important;
     transition: width 1s;
 }
+
 // End Searchbar

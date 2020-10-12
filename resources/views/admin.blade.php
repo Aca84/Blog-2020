@@ -4,6 +4,7 @@
 <h3 class="text-center">Admin dashboard</h3>
 <hr>
 <h5 class="text-center">Ukupno {{$posts->count()}} post-a</h5>
+{{-- {{Auth::user()->email}} prikazuje samo za ulogovanog korisnika --}}
 <hr>
 {{-- @if (count($posts ?? '')>0) --}}
 @foreach ($posts as $post)

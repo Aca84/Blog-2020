@@ -37,10 +37,10 @@ class PostsController extends Controller
     public function search(Request $request){
 
         $request->validate(
-            ['query'=>'required|min:1']
+            ['search'=>'required|min:1']
         );
 
-        $query = $request->input('query');
+        $query = $request->input('search');
 
         $posts = Posts::where('title', 'like', "%$query%")->get();
         return view('search')->with('posts', $posts);

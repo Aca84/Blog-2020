@@ -15,7 +15,7 @@
         Simple txt blog
       </div>
       <div class="col-4 text-center">
-        <a class="text-light text-center" href="/about">About</a>
+        <a class="text-light float-right pr-3" href="/about">About Blog</a>
       </div>
     </div>
     <div class="col-12 text-center">Blog2020 © {{ date('Y') }} skjfhsilgmail.com</div>

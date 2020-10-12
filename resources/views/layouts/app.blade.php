@@ -20,7 +20,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('sass/custom.scss') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('sass/custom.scss') }}" rel="stylesheet"> --}}
 
 
 </head>
@@ -30,7 +30,7 @@
         <div class="container">
             @include('include/navbar')
             {{-- @include('include/sidebar') --}}
-            {{-- @include('include/messages') --}}
+            @include('include/messages')
             <main class="container-fluid rounded shadow py-2 my-3" style='min-height: 800px'>
                 @yield('content')
                 <div class="text-center">

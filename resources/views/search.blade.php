@@ -14,7 +14,7 @@
     </form> --}}
             <h3 class="my-3">Search results</h3>
                 {{-- prikazivanje broja nadjenih postova --}}
-                <p>{{$posts->count()}} result's for '{{request()->input('query')}}' </p>
+                <p>{{$posts->count()}} result's for '{{request()->input('search')}}' </p>
 
             @if(count($posts) > 0)
                 @foreach($posts as $p)
@@ -34,7 +34,7 @@
             @endforeach
         @else
         <tr>
-            <td colspan="3" class="text-danger py-5"><h4>Result not found.</h4></td>
+            <td colspan="3" class="text-danger py-5"><h4>Nothing found.</h4></td>
         </tr>
         @endif
         {{-- {{ $posts->links() }} --}}
