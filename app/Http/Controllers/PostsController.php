@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Posts;
 use DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
+
 
 
 class PostsController extends Controller
@@ -27,7 +29,6 @@ class PostsController extends Controller
      */
     public function index()
     {
-        // $posts = Posts::orderBy('created_at','desc')->simplePaginate(5);
         $posts = Posts::orderBy('created_at','desc')->paginate(5);
 
         return view('posts.index')->with('posts', $posts);
@@ -39,7 +40,6 @@ class PostsController extends Controller
         $request->validate(
             ['search'=>'required|min:1']
         );
-
         $query = $request->input('search');
 
         $posts = Posts::where('title', 'like', "%$query%")->get();
@@ -67,9 +67,7 @@ class PostsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required'
-
-        ]);
-        
+        ]);      
         //Create post
         $post = new Posts;
         $post->title = $request->input('title');
@@ -103,15 +101,12 @@ class PostsController extends Controller
         $post = Posts::find($id);
 
         if (Auth::user()->role == 'admin') {
-
             return view('posts/edit')->with('post',$post);
         }
-
         // Check if it logged user auth for edit
         if(Auth::user()->id !== $post->user_id){
             return redirect('/posts')->with('error', 'no no no');
         }
-
         return view('posts/edit')->with('post',$post);
     }
 
@@ -159,10 +154,8 @@ class PostsController extends Controller
             return redirect('/admin')->with('success','Admin deleted the Post');
         }
         
-
         // Check if it logged user auth old
         if(Auth::user()->id !== $post->user_id){  //new way with auth included up
-        // if(auth()->user()->id !== $post->user_id){ old way
             return redirect('/posts')->with('error', 'no no no');
         }
         $post->delete();

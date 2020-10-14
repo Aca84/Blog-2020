@@ -25,9 +25,7 @@ use Illuminate\Http\Request;
  Route::get('/', 'App\Http\Controllers\PagesController@index');
  Route::get('/about', 'App\Http\Controllers\PagesController@about');
  Route::get('/user', 'App\Http\Controllers\PagesController@user');
-//  Route::get('/admin', 'App\Http\Controllers\Auth\LoginController@admin'); // not found,but found admin
 
- 
  Route::resource('posts', 'App\Http\Controllers\PostsController');
  Auth::routes();
  

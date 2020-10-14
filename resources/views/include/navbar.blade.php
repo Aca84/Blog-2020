@@ -44,7 +44,8 @@
                     <a class="dropdown-item" href="/home">Dashboard</a>
                     {{-- provera da li je ulogovani usr admin --}}
                     @if (Auth::user()->role == 'admin')
-                    <a class="dropdown-item" href="/admin">Admin</a>
+                    <a class="dropdown-item" href="/admin">Admin Posts</a>
+                    <a class="dropdown-item" href="/user">Admin Users</a>
                     @endif
                     {{-- Logout --}}
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();

@@ -22,7 +22,7 @@
       <a href="/posts/{{$post->id}}">Read more</a>         
     </div>
 
-    <small class="text-muted my-2 p-3">by {{$post->user->name}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
+    <small class="text-muted my-2 p-3">by {{$post->user['name']}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
     
     <div class="mx-2 mb-1 bg-info rounded p-1">
         <a href="/posts/{{$post->id}}/edit" class="btn btn-light">Edit</a>

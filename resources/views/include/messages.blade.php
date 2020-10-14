@@ -7,7 +7,7 @@
 @endif
 
 @if (session('success'))
-        <div class="alert alert-success my-2 w-25 text-center">
+        <div class="alert alert-success my-2 w-25 text-center mx-auto">        
             {{session('success')}}
         </div>  
 @endif

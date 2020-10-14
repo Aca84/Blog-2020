@@ -49,41 +49,11 @@ class LoginController extends Controller
     // public function authenticated(Request $request, $user)
     public function admin(Request $request, Auth $user)
     {
-        // $role = Auth::user('admin');
-
-        // dd($role);
-        // print_r($role);
-        // $role = $user->role;
-        // $role = Auth::user();
-
-        // if ($role->(['admin'])) {
-
-        //     return view('/admin');
-        // }
-
-        // if ($role->(['admin'])) {
-        //     return view('/admin');
-        // }
-        // if ($role === ['user']) {
-        //     return redirect('/home');
-        // }
-        // return redirect('/posts/index');
-
-        // dd(auth()->user()->role);
-        // dd(Auth::user()->name);
-        // dd(Auth::user(['name']));
-        // $user = Auth::user();
-       
-        // $posts = Posts::orderBy('created_at','desc');
         $posts = Posts::all()->sortByDesc('created_at');
 
-        // dd($posts);
-
         if (Auth::check() && Auth::user()->role == 'admin') {
-            // if (Auth::user(['role']) === 'admin') {
 
             return view('/admin', compact('posts'));
-            // return view('/admin')->with('posts', $posts);
         }
             
         if (Auth::check() && Auth::user()->role == 'user') {
