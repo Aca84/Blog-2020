@@ -58,9 +58,12 @@ body {
   white-space: pre-line;
 }
 
-p.text::first-letter {
+.text-show::first-letter {
   font-size: 50px !important;
-  font-weight: bold !important;
+  float: left;
+  font-style: italic;
+  line-height: 30%;
+  margin-right: 10px;
 }
 
 .text-show {
@@ -74,7 +77,7 @@ p.text::first-letter {
 
 .nav-src:hover {
   width: 300px !important;
-  transition: width 1s;
+  transition: width 1.2s;
 }
 
 /*!

@@ -6,10 +6,10 @@
     <div class="card-header bg-transparent">
         <h3>{{$post->title}}</h3>
     </div>
-    <div class="text-show my-5 p-4 text-justify" style="max-width: 100%;">
+    <div class="text-show  p-3 text-justify" style="max-width: 100%;">
         {!!$post->body!!}
     </div>
-    <small class="text-muted p-3">by {{$post->user['name']}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
+    <small class="text-muted my-2 p-3">by {{$post->user['name']}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
     <div class="card-footer bg-transparent mx-2">
         {{-- Checking if is guest and if is loged user rights to edit/delete --}}
         @if (!Auth::guest())

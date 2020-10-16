@@ -10,14 +10,14 @@
 {{-- @if (count($posts ?? '')>0) --}}
 @foreach ($posts as $post)
 
-<div class="card my-2  shadow" style="width: 100%;">
+<div class="card my-3 shadow" style="width: 100%;">
 
     <div class="card-header bg-transparent">
       <h3><a class="text-decoration-none text-dark" href="/posts/{{$post->id}}">{{$post->title}}</a></h3>     
     </div>
     
-    <div class="text my-2 p-3 text-justify" style="max-width: 100%;">
-      <p class="text "> 
+    <div class="text p-3 text-justify" style="max-width: 100%;">
+      <p class="text-show"> 
         {{$post->body}}
       </p>        
       <a href="/posts/{{$post->id}}">Read more</a>         

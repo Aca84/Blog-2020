@@ -52,11 +52,20 @@ body {
     // Za ispis teksta kako je unet, da ne bude blok
     white-space: pre-line;
 }
-p.text::first-letter {
+// p.text::first-letter { //ne radi iz nekog razloga
+//     font-size: 100px !important;
+//     font-weight: bold !important;
+//     color: yellow;
+//     margin: 5px;
+// }
+.text-show::first-letter{
     font-size: 50px !important;
-    font-weight: bold !important;
+    float: left;
+    font-style: italic;
+    line-height: 30%;
+    margin-right: 10px;
 }
-.text-show{
+.text-show {
     white-space: pre-line;
     word-break: break-all !important;
 }
@@ -67,6 +76,6 @@ p.text::first-letter {
 }
 .nav-src:hover {
     width: 300px !important;
-    transition: width 1s;
+    transition: width 1.2s;
 }
 // End Searchbar
