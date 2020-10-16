@@ -3,9 +3,10 @@
 
 <h3 class="text-center">Admin dashboard</h3>
 <hr>
-<h5 class="text-center">Ukupno {{$posts->count()}} post-a</h5>
+<h6 class="text-center">Ukupno {{$posts->count()}} post-a</h6>
+{{-- {{$today = today()}} --}}
 {{-- {{Auth::user()->email}} prikazuje samo za ulogovanog korisnika --}}
-<hr>
+<hr class="bg-info">
 {{-- @if (count($posts ?? '')>0) --}}
 @foreach ($posts as $post)
 

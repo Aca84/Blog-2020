@@ -2,27 +2,22 @@ body {
     background: rgb(230, 230, 230) !important;
     scroll-behavior: smooth;
 }
-
 // Navbar
 .navbar {
     // font-family: 'Cabin' !important;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 // Icon for search in navbar
 .fa-search {
     color: white;
 }
-
 // Footer
 .footer {
     height: 100px !important;
 }
-
 .row {
     height: 80px !important;
 }
-
 .col-12 {
     position: bottom;
     bottom: 0;
@@ -30,24 +25,19 @@ body {
     background-color: black;
     color: white;
     text-align: center;
-    //   height: 45px;
 }
-
 // End footer
 .container {
     background: rgb(247, 247, 247);
 }
-
 .container-fluid {
     background: rgb(255, 255, 255);
-    margin-top: 110px !important;
+    margin-top: 150px;
 }
-
 // Card
 .card {
-    min-height: 300px;
+    min-height: 250px;
 }
-
 // Text post
 .text {
     text-align: left;
@@ -62,28 +52,21 @@ body {
     // Za ispis teksta kako je unet, da ne bude blok
     white-space: pre-line;
 }
-
 p.text::first-letter {
     font-size: 50px !important;
     font-weight: bold !important;
 }
-
 .text-show{
-    // white-space: pre;
-    // word-wrap: break-word;
     white-space: pre-line;
     word-break: break-all !important;
 }
 // End text post
-
 // Search bar 
 .nav-src {
     width: 89px !important;
 }
-
 .nav-src:hover {
     width: 300px !important;
     transition: width 1s;
 }
-
 // End Searchbar

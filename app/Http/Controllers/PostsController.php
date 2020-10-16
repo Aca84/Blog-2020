@@ -8,8 +8,6 @@ use DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 
-
-
 class PostsController extends Controller
 {
     /**
@@ -21,7 +19,6 @@ class PostsController extends Controller
     {
         $this->middleware('auth', ['except'=>['index','show','search']]);
     }
-
     /**
      * Display a listing of the resource.
      *
@@ -33,7 +30,6 @@ class PostsController extends Controller
 
         return view('posts.index')->with('posts', $posts);
     }
-
     // ** function for searching the posts **//
     public function search(Request $request){
 
@@ -45,7 +41,6 @@ class PostsController extends Controller
         $posts = Posts::where('title', 'like', "%$query%")->get();
         return view('search')->with('posts', $posts);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -55,7 +50,6 @@ class PostsController extends Controller
     {
         return view('posts.create');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -77,7 +71,6 @@ class PostsController extends Controller
 
         return redirect('/posts');
     }
- 
     /**
      * Display the specified resource.
      *
@@ -89,7 +82,6 @@ class PostsController extends Controller
         $post = Posts::find($id);
         return view('posts/show')->with('post',$post);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -109,7 +101,6 @@ class PostsController extends Controller
         }
         return view('posts/edit')->with('post',$post);
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -134,10 +125,8 @@ class PostsController extends Controller
 
             return redirect('/admin')->with('Well done');
         }
-
         return redirect('/home')->with('success', 'Post updated!');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -153,14 +142,11 @@ class PostsController extends Controller
             $post->delete();
             return redirect('/admin')->with('success','Admin deleted the Post');
         }
-        
         // Check if it logged user auth old
         if(Auth::user()->id !== $post->user_id){  //new way with auth included up
             return redirect('/posts')->with('error', 'no no no');
         }
         $post->delete();
-
         return redirect('/posts')->with('success','Post deleted');
     }
-
 }

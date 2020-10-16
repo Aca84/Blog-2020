@@ -12,7 +12,6 @@ use DB;
 use App\Models\Posts;
 use Redirect;
 
-
 class LoginController extends Controller
 {
     /*
@@ -30,11 +29,8 @@ class LoginController extends Controller
      * Where to redirect users after login.
      *
      * @var string
-     */
-
-    
+     */  
     // protected $redirectTo = RouteServiceProvider::HOME; 
-
     /**
      * Create a new controller instance.
      *
@@ -45,21 +41,17 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
         return redirect('/posts/index');
     }
-
     // public function authenticated(Request $request, $user)
     public function admin(Request $request, Auth $user)
     {
         $posts = Posts::all()->sortByDesc('created_at');
 
         if (Auth::check() && Auth::user()->role == 'admin') {
-
             return view('/admin', compact('posts'));
-        }
-            
+        }   
         if (Auth::check() && Auth::user()->role == 'user') {
             return redirect('/home');
         } 
-
         return redirect('/posts');     
     }
    
