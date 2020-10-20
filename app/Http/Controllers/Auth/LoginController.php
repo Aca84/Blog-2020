@@ -44,8 +44,9 @@ class LoginController extends Controller
     // public function authenticated(Request $request, $user)
     public function admin(Request $request, Auth $user)
     {
-        $posts = Posts::all()->sortByDesc('created_at');
-
+        // $posts = Posts::all()->sortByDesc('created_at'); //shows all posts (count) in admin panel, but no pagination
+        $posts = Posts::orderBy('created_at','desc')->paginate(5); // shows all posts with pagination,and count all with total in view 
+        
         if (Auth::check() && Auth::user()->role == 'admin') {
             return view('/admin', compact('posts'));
         }   

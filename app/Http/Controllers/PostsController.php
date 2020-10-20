@@ -27,7 +27,6 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Posts::orderBy('created_at','desc')->paginate(5);
-
         return view('posts.index')->with('posts', $posts);
     }
     // ** function for searching the posts **//
@@ -122,7 +121,6 @@ class PostsController extends Controller
         $post->save();
 
         if (Auth::user()->role == 'admin') { 
-
             return redirect('/admin')->with('Well done');
         }
         return redirect('/home')->with('success', 'Post updated!');
@@ -138,7 +136,6 @@ class PostsController extends Controller
         $post = Posts::find($id);
 
         if (Auth::user()->role == 'admin') {
-
             $post->delete();
             return redirect('/admin')->with('success','Admin deleted the Post');
         }

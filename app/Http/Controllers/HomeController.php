@@ -23,8 +23,15 @@ class HomeController extends Controller
      */
     public function index()
     {   
+ 
+        // $posts = Auth::user('id')->posts()->get();
         $user_id = auth()->user()->id;
-        $user = User::find($user_id);
-        return view('home')->with('posts',$user->posts->sortByDesc('created_at'));
+        $user = User::find($user_id)->posts()->paginate(5);
+        // $user = User::find($user_id);
+
+
+        return view('home')->with('posts',$user);
+        // return view('home')->with('posts',$user->posts->sortByDesc('created_at'));
+        // return view('home')->with('posts',$posts->sortByDesc('created_at'));
     }
 }

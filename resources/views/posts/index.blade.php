@@ -3,7 +3,6 @@
 @section('content')
     {{-- datum --}}
     {{-- {{date('d-m-yy')}} --}}
-
     {{-- prikazivanje svih postova u index-u --}}
     @if (count($posts)>0) 
         @foreach ( $posts as $post)
@@ -15,7 +14,10 @@
             </div>
             
             <div class="text p-3 text-justify" style="max-width: 100%;">
-              <p class="text-show"> 
+              <p class="text-body"> 
+                {{-- <span class="text-body">
+                  {{$post->body}}
+                </span> --}}
                 {{$post->body}}
               </p>        
               <a href="/posts/{{$post->id}}">Read more</a>         
@@ -25,7 +27,6 @@
           </div>
         @endforeach
           <div class="pagination justify-content-center">{{$posts->links()}}</div>     
-          {{-- {{$posts->links()}} --}}
     @else
        <p><i>No posts for now</i></p>     
     @endif

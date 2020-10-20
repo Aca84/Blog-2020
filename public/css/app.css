@@ -34,20 +34,16 @@ body {
   background: #f7f7f7;
 }
 
-.container-fluid,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
+main.container {
   background: white;
-  margin-top: 150px;
+  margin-top: 100px !important;
 }
 
 .card {
   min-height: 250px;
 }
 
-.text {
+.text-body {
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -58,17 +54,22 @@ body {
   white-space: pre-line;
 }
 
-.text-show::first-letter {
+p::first-letter {
+  font-family: Brush Script MT, Brush Script Std, cursive !important;
   font-size: 50px !important;
   float: left;
   font-style: italic;
-  line-height: 30%;
+  line-height: 30% !important;
   margin-right: 10px;
+}
+
+.text-body {
+  white-space: pre-line;
+  word-break: break-all !important;
 }
 
 .text-show {
   white-space: pre-line;
-  word-break: break-all !important;
 }
 
 .nav-src {

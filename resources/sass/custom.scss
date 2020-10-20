@@ -15,9 +15,11 @@ body {
 .footer {
     height: 100px !important;
 }
+
 .row {
     height: 80px !important;
 }
+
 .col-12 {
     position: bottom;
     bottom: 0;
@@ -30,18 +32,20 @@ body {
 .container {
     background: rgb(247, 247, 247);
 }
-.container-fluid {
+
+main.container {
     background: rgb(255, 255, 255);
-    margin-top: 150px;
+    margin-top: 100px !important;
 }
+
 // Card
 .card {
     min-height: 250px;
 }
+
 // Text post
-.text {
+.text-body {
     text-align: left;
-    // min-height: 150px;
     //copied from stackO
     overflow: hidden;
     text-overflow: ellipsis;
@@ -52,28 +56,30 @@ body {
     // Za ispis teksta kako je unet, da ne bude blok
     white-space: pre-line;
 }
-// p.text::first-letter { //ne radi iz nekog razloga
-//     font-size: 100px !important;
-//     font-weight: bold !important;
-//     color: yellow;
-//     margin: 5px;
-// }
-.text-show::first-letter{
+
+p::first-letter {
+    font-family: Brush Script MT, Brush Script Std, cursive !important; // Curvy letters
     font-size: 50px !important;
     float: left;
     font-style: italic;
-    line-height: 30%;
+    line-height: 30% !important;
     margin-right: 10px;
 }
-.text-show {
+
+.text-body {
     white-space: pre-line;
     word-break: break-all !important;
+}
+
+.text-show {
+    white-space: pre-line;
 }
 // End text post
 // Search bar 
 .nav-src {
     width: 89px !important;
 }
+
 .nav-src:hover {
     width: 300px !important;
     transition: width 1.2s;
