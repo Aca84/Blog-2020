@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'driver' => env('SCOUT_DRIVER', 'algolia'),
+    'driver' => env('SCOUT_DRIVER'),
 
     /*
     |--------------------------------------------------------------------------
@@ -99,9 +99,9 @@ return [
     |
     */
 
-    'algolia' => [
-        'id' => env('ALGOLIA_APP_ID', 'FIHFJVEOLJ'),
-        'secret' => env('ALGOLIA_SECRET', '016e0f9263f4caeebce07925e9af8a5a'),
-    ],
+    // 'algolia' => [
+    //     // 'id' => env('ALGOLIA_APP_ID', 'FIHFJVEOLJ'),
+    //     // 'secret' => env('ALGOLIA_SECRET', '016e0f9263f4caeebce07925e9af8a5a'),
+    // ],
 
 ];

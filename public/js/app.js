@@ -37264,7 +37264,12 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"),
+    includes = _require.includes;
+
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+includes('main.js');
 
 /***/ }),
 

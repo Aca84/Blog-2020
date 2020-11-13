@@ -50,14 +50,13 @@ main.container {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 6;
     /* number of lines to show */
     -webkit-box-orient: vertical;
     // Za ispis teksta kako je unet, da ne bude blok
     white-space: pre-line;
 }
-
-p::first-letter {
+p.text-body::first-letter { // sometimes work, other times won't, no reason but not working?! 
     font-family: Brush Script MT, Brush Script Std, cursive !important; // Curvy letters
     font-size: 50px !important;
     float: left;
@@ -65,23 +64,49 @@ p::first-letter {
     line-height: 30% !important;
     margin-right: 10px;
 }
-
-.text-body {
-    white-space: pre-line;
-    word-break: break-all !important;
-}
-
+// .text-body {
+//     white-space: pre-line;
+//     word-break: break-all !important;
+// }
 .text-show {
     white-space: pre-line;
 }
 // End text post
 // Search bar 
 .nav-src {
-    width: 89px !important;
+    width: 90px !important;
+    transition: width 1.5s linear  !important;
 }
-
 .nav-src:hover {
     width: 300px !important;
-    transition: width 1.2s;
+    // transition: width 2s;
 }
 // End Searchbar
+
+// Pagination colors
+.page-link{
+    color: rgb(92, 92, 92) !important;
+    border:  none !important;
+}
+.page-item.active .page-link{
+    background-color: rgb(74, 161, 243) !important;
+    border-color: gray !important;
+    border:  none;
+}
+
+// .msgs{
+//     height: 100px;
+
+// }
+
+#onTop{
+    // float: right;
+    // margin-bottom: 30px;
+    // margin-right: 30px;
+
+    // display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+}

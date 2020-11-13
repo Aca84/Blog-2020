@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Blog') }}</title>
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('/js/app.js') }}" defer></script>
     <script src="{{ asset('/js/tinymce/tinymce.min.js') }}"></script>
 
     <!-- Fonts -->
@@ -22,20 +22,32 @@
 </head>
 
 <body>
+    <div class="btn btn-dark mb-3 mr-3" onclick="goToTop()" id="onTop">UP</div>
     <div id="app">
         <div class="container">
             @include('include/navbar')
+            {{-- buttons for changing theme to dark/light --}}
+            {{-- <button class="btn btn-dark mt-3" id="button">Dark</button>
+            <button class="btn btn-light mt-3" id="button1">Light</button> --}}
             {{-- @include('include/sidebar') --}}
-            @include('include/messages')
+            <div class="msgs">
+                @include('include/messages')
+            </div>
             <main class="container rounded shadow py-2 my-3" style='min-height: 800px'>
+                {{-- @include('include/messages') --}}
                 @yield('content')
-                <div class="text-center">
-                    {{-- @include('include/messages') --}}
-                </div>
+                {{-- <div class="text-center">
+                    {{-- @include('include/messages') 
+                </div> --}}
             </main>
+            
             @include('include/footer')
         </div>
     </div>
+    {{-- <script src="{{ asset('/js/main.js') }}"></script> --}}
+    
 </body>
-
+    {{-- <script src="{{ asset('/js/main.js') }}"></script> --}}
 </html>
+    <script src="{{ asset('/js/main.js') }}"></script>
+

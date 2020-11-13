@@ -18,9 +18,9 @@
             <form class="form-inline my-2 my-lg-0 justify-content-end mr-3" method="GET" action="{{ route('search') }}">
                 @csrf
                 <input class="nav-src form-control mr-sm-2" type="search" placeholder="Search" name="search" id="query">
-                <button class="btn my-1 my-sm-0" type="submit" data-container="body" data-toggle="popover" data-placement="right" data-content="Type something!">
+                <div class="btn my-1 my-sm-0" type="submit" data-container="body" data-toggle="popover" data-placement="right" data-content="Type something!">
                     <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
+                </div>
             </form>
             <!-- Authentication Links -->
             @guest
@@ -61,4 +61,4 @@
         </ul>
     </div>
 </nav>
-
+<script src="{{ asset('/js/main.js') }}"></script>

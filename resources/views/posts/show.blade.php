@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
 <a href="/posts" class="btn-sm btn-secondary px-3 my-2">Back</a>
 
 <div class="card my-3 shadow" style="max-width: 100%;">

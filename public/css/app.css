@@ -48,13 +48,13 @@ main.container {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 6;
   /* number of lines to show */
   -webkit-box-orient: vertical;
   white-space: pre-line;
 }
 
-p::first-letter {
+p.text-body::first-letter {
   font-family: Brush Script MT, Brush Script Std, cursive !important;
   font-size: 50px !important;
   float: left;
@@ -63,22 +63,34 @@ p::first-letter {
   margin-right: 10px;
 }
 
-.text-body {
-  white-space: pre-line;
-  word-break: break-all !important;
-}
-
 .text-show {
   white-space: pre-line;
 }
 
 .nav-src {
-  width: 89px !important;
+  width: 90px !important;
+  transition: width 1.5s linear !important;
 }
 
 .nav-src:hover {
   width: 300px !important;
-  transition: width 1.2s;
+}
+
+.page-link {
+  color: #5c5c5c !important;
+  border: none !important;
+}
+
+.page-item.active .page-link {
+  background-color: #4aa1f3 !important;
+  border-color: gray !important;
+  border: none;
+}
+
+#onTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 
 /*!

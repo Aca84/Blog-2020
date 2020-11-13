@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
+
     <div class="my-5" style="max-width: 100%;">
         <div class="card-header bg-transparent text-center border-0 rounded">
             @if (session('status'))

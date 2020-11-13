@@ -1,4 +1,4 @@
-<div class="footer bg-secondary rounded-top navbar-static-bottom navbar-fixed-bottom w-100 ">   
+<div class="footer bg-secondary rounded-top navbar-static-bottom navbar-fixed-bottom w-100 shadow">   
     {{-- <ul class="row">
       <li class="nav-item py-3">
         <a class="text-light text-center">Copyright © {{ date('Y') }}</a>
@@ -18,5 +18,5 @@
         <a class="text-light float-right pr-3" href="/about">About Blog</a>
       </div>
     </div>
-    <div class="col-12 text-center">Blog2020 © {{ date('Y') }} skjfhsilgmail.com</div>
+    <div class="col-12 text-center">Blog2020 © {{ date('Y') }} skjfhsil@gmail.com</div>
 </div>
