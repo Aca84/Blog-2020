@@ -51,30 +51,8 @@
 //     text.style.color = 'white';
 // }
 
-
-
 // end fje for theme change
-// var all = document.getElementById('app');
-// all.style.background = 'black';
 
-// var oll = document.querySelectorAll('.container');
-// oll.forEach((list) => { //working this too
-//     list.style.background = '#6b6b6b';
-// });
-
-// var card = document.querySelectorAll('.card');
-// card.forEach((list) => { //working this too
-//     list.style.background = 'darkgray';
-// });
-
-// card.style.background = 'lightgreen';
-// console.log(card);
-
-
-// var nav = document.querySelectorAll('.navbar');
-// nav.style.background = '#000';
-
-// console.log(nav);
 
 //Fja za automatsko brisanje alert poruka
 // var nana = document.querySelectorAll('#alert');
@@ -99,9 +77,17 @@ var top = document.getElementById('onTop');
 
 function goToTop(){
     // document.documentElement.scrollTop = 0;
+    // var top = document.getElementById('onTop');
 
-    top.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+    // if(top <= 30){
+        // top.display();
+
+        top.scrollTo({ // auto scroll on top of page
+            top: 0,
+            behavior: "smooth"
+          });
+    // }
+    
+
+    
 }

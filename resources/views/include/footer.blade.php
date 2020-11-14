@@ -12,11 +12,11 @@
     </ul> --}}
     <div class="row text-light p-3">
       <div class="col-8 pl-3">
-        Simple txt blog
+        <a class="text-light pr-3" href="/about">About Blog</a>
       </div>
-      <div class="col-4 text-center">
-        <a class="text-light float-right pr-3" href="/about">About Blog</a>
-      </div>
+      {{-- <div class="col-4 text-center"> --}}
+        {{-- <a class="text-light float-right pr-3" href="/about">About Blog</a> --}}
+      {{-- </div> --}}
     </div>
     <div class="col-12 text-center">Blog2020 © {{ date('Y') }} skjfhsil@gmail.com</div>
 </div>

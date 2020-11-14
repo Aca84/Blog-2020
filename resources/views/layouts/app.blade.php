@@ -22,7 +22,8 @@
 </head>
 
 <body>
-    <div class="btn btn-dark mb-3 mr-3" onclick="goToTop()" id="onTop">UP</div>
+    {{-- button for return on top of page --}}
+    <div class="btn btn-dark mb-3 mr-3" onclick="goToTop()" id="onTop"><i class="fas fa-angle-double-up"></i></div>
     <div id="app">
         <div class="container">
             @include('include/navbar')

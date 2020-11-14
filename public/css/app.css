@@ -69,21 +69,23 @@ p.text-body::first-letter {
 
 .nav-src {
   width: 90px !important;
-  transition: width 1.5s linear !important;
+  transition: width 1s linear !important;
 }
 
 .nav-src:hover {
-  width: 300px !important;
+  width: 200px !important;
 }
 
 .page-link {
   color: #5c5c5c !important;
+  border-radius: 25px;
   border: none !important;
 }
 
 .page-item.active .page-link {
   background-color: #4aa1f3 !important;
   border-color: gray !important;
+  border-radius: 25px;
   border: none;
 }
 
