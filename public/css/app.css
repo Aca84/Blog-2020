@@ -1,11 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 body {
-  background: #e6e6e6 !important;
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .navbar {
+  font-family: "Cabin" !important;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -44,23 +48,13 @@ main.container {
 }
 
 .text-body {
-  text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  /* number of lines to show */
-  -webkit-box-orient: vertical;
-  white-space: pre-line;
-}
-
-p.text-body::first-letter {
-  font-family: Brush Script MT, Brush Script Std, cursive !important;
-  font-size: 50px !important;
-  float: left;
-  font-style: italic;
-  line-height: 30% !important;
-  margin-right: 10px;
+  text-align: left !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5 !important;
+  -webkit-box-orient: vertical !important;
+  white-space: pre-line !important;
 }
 
 .text-show {
@@ -92,7 +86,20 @@ p.text-body::first-letter {
 #onTop {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 0px;
+}
+
+.fas {
+  font-size: 35px !important;
+  color: black;
+}
+
+.fas:hover {
+  color: #2caaf3;
+}
+
+.back {
+  font-size: 25px !important;
 }
 
 /*!

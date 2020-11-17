@@ -18,7 +18,7 @@
             @foreach ($posts as $p)
             <div class="card mb-5 shadow" style="max-width: 100%;">
                 <div class="card-header bg-transparent"><h3>{{$p->title}}</h3></div>
-                <div class="text-body my-5 p-3 text-justify" style="max-width: 100%;">
+                <div class="text my-5 p-3 text-justify" style="max-width: 100%;">
                     {!!$p->body!!}
                 </div>
                 <small class="text-muted my-2 p-3">by {{$p->user['name']}} on {{$p->created_at->format('d-m-yy H:i')}}</small>

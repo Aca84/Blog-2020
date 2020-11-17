@@ -11,7 +11,7 @@
     </div>
     <div class="form-group">
         {{Form::label('body', 'Body')}}  
-        {{Form::textarea('body',$post->body,['class' => 'form-control','placeholder'=>'Body text', 'w-70'])}}        
+        {{Form::textarea('body',$post->body,['id'=>'editor','class' => 'form-control','placeholder'=>'Body text', 'w-70'])}}        
     </div>
         {{Form::hidden('_method','PUT')}}
         {{Form::submit('Edit!!',['class'=> 'btn btn-outline-dark mb-2'])}}

@@ -37269,7 +37269,7 @@ var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.j
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-includes('main.js');
+includes('main.js'); // const ClassicEditor = require( '@ckeditor/ckeditor5-build-classic' );
 
 /***/ }),
 

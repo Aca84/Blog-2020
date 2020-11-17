@@ -1,7 +1,16 @@
 @extends('layouts.app')
 @section('content')
 
-<a href="/posts" class="btn-sm btn-secondary px-3 my-2">Back</a>
+{{-- Check if is user admin if is, will retur to admin panel not to indef which is default --}}
+@if (Auth::user()->role == 'admin') 
+    <a href="/admin">
+        <i class="back fas fa-reply">Back</i>
+    </a>
+@else
+    <a href="/posts">
+        <i class="back fas fa-reply">Back</i>
+    </a>
+@endif
 
 <div class="card my-3 shadow" style="max-width: 100%;">
     <div class="card-header bg-transparent">

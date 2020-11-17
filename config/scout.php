@@ -99,7 +99,7 @@ return [
     |
     */
 
-    // 'algolia' => [
+    // 'algolia' => [ // Dont use this, is bad,bugy and not needed
     //     // 'id' => env('ALGOLIA_APP_ID', 'FIHFJVEOLJ'),
     //     // 'secret' => env('ALGOLIA_SECRET', '016e0f9263f4caeebce07925e9af8a5a'),
     // ],

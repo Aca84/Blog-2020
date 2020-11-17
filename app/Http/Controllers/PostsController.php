@@ -96,7 +96,7 @@ class PostsController extends Controller
         }
         // Check if it logged user auth for edit
         if(Auth::user()->id !== $post->user_id){
-            return redirect('/posts')->with('error', 'no no no');
+            return redirect('/posts')->with('error', 'No no no, you must be logged an admin for that');
         }
         return view('posts/edit')->with('post',$post);
     }

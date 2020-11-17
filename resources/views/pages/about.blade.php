@@ -10,7 +10,7 @@
         <p class="text-body">
             This is simple text blog.
             Created in Laravel 8, using bootstrap 4 and html-css. 
-            No JavaScript included for now.
+            Little JavaScript included for now.
                 
             Be nice, create some great texts and enjoy reading some.
         </p>

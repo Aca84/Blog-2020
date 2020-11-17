@@ -14,7 +14,7 @@
         </ul>
         <!-- Right Side Of Navbar -->
         <ul class="navbar-nav ml-auto">
-            {{-- search polje --}}
+            {{-- Search form  --}}
             <form class="form-inline my-2 my-lg-0 justify-content-end mr-3" method="GET" action="{{ route('search') }}">
                 @csrf
                 <input class="nav-src form-control mr-sm-2" type="search" placeholder="Search" name="search" id="query">
@@ -42,10 +42,10 @@
                 <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="/posts/create">Create</a>
                     <a class="dropdown-item" href="/home">Dashboard</a>
-                    {{-- provera da li je ulogovani usr admin --}}
+                    {{-- Check if is logged user admin --}}
                     @if (Auth::user()->role == 'admin')
-                    <a class="dropdown-item" href="/admin">Admin Posts</a>
-                    <a class="dropdown-item" href="/user">Admin Users</a>
+                        <a class="dropdown-item" href="/admin">Admin Posts</a>
+                        <a class="dropdown-item" href="/user">Admin Users</a>
                     @endif
                     {{-- Logout --}}
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
