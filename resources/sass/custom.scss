@@ -54,13 +54,25 @@ main.container {
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     display: -webkit-box !important;
+    -webkit-line-clamp: 7 !important;
+    //number of lines to show 
+    -webkit-box-orient: vertical !important;
+    // Za ispis teksta kako je unet, da ne bude blok
+    white-space: pre-line !important;
+}
+.text {
+    text-align: left !important;
+    //copied from stackO
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
     -webkit-line-clamp: 5 !important;
     //number of lines to show 
     -webkit-box-orient: vertical !important;
     // Za ispis teksta kako je unet, da ne bude blok
     white-space: pre-line !important;
 }
-// p.text-body::first-letter { // sometimes work, other times won't, no reason but not working?! 
+// .text::first-letter { // sometimes work, other times won't, no reason but not working?! 
 //     font-family: Brush Script MT, Brush Script Std, cursive !important; // Curvy letters
 //     font-size: 50px !important;
 //     float: left;

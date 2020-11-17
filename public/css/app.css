@@ -52,6 +52,16 @@ main.container {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   display: -webkit-box !important;
+  -webkit-line-clamp: 7 !important;
+  -webkit-box-orient: vertical !important;
+  white-space: pre-line !important;
+}
+
+.text {
+  text-align: left !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
   -webkit-line-clamp: 5 !important;
   -webkit-box-orient: vertical !important;
   white-space: pre-line !important;

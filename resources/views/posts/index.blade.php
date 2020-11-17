@@ -12,7 +12,7 @@
             {{-- Post body --}}
             <div class="text p-3 text-justify" style="max-width: 100%;" id="body-text">
               <p class="text-body" id="body-text"> 
-                {!! html_entity_decode($post->body) !!}
+                {!! $post->body !!}
               </p>
               <a href="/posts/{{$post->id}}">Read more</a>         
             </div>

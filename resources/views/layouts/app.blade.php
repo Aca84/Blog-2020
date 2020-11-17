@@ -37,16 +37,16 @@
       
         <div class="container">
             @include('include/navbar')
-            {{-- Error  messages --}}
-            <div class="msgs">
-                @include('include/messages')
-            </div>
-            <main class="container rounded shadow py-2 my-3" style='min-height: 800px'>
-                @yield('content')
-            </main>
-            
+                {{-- Error  messages --}}
+                <div class="msgs">
+                    @include('include/messages')
+                </div>
+                <main class="container rounded shadow py-2 my-3" style='min-height: 800px'>
+                    @yield('content')
+                </main>
             @include('include/footer')
         </div>
+
     </div>
     {{-- Js file import --}}
     <script src="{{ asset('/js/main.js') }}"></script>
