@@ -1,19 +1,16 @@
 @extends('layouts.app')
 @section('content')
 
-{{-- Check if is user admin if is, will retur to admin panel not to index which is default --}}
+{{-- Check if is user admin if is, will retur to admin panel not to index which is default   Nov everyone goes to posts lol--}}
 
-    {{-- <a href="/posts">
-        <i class="back fas fa-reply"> back</i>
-    </a> --}}
-@if (!Auth::guest() && !Auth::user()->role == 'user') 
-    <a href="/posts">
-        <i class="back fas fa-reply"> back</i>
-    </a>
-@else
+@if (Auth::check() && Auth::user()->role == 'admin') 
     <a href="/admin">
         <i class="back fas fa-reply"> back</i>
     </a> 
+@else
+    <a href="/posts">
+        <i class="back fas fa-reply"> back</i>
+    </a>
 @endif
 
 
