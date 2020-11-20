@@ -15,12 +15,6 @@ class Posts extends Model
     {
         return 'posts_index';
     }
-    // public function toSearchableArray()
-    // {
-    //     $array = $this->toArray();
-        
-    //     return array('id' => $array['id'],'title' => $array['title']);
-    // }
 
     public function user()
     {

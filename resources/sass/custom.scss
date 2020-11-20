@@ -15,15 +15,16 @@ a {
 .fa-search {
     color: white;
 }
+.fa-search:hover {
+    color: rgb(5, 5, 5);
+}
 // Footer
 .footer {
     height: 100px !important;
 }
-
 .row {
     height: 80px !important;
 }
-
 .col-12 {
     position: bottom;
     bottom: 0;
@@ -36,37 +37,22 @@ a {
 .container {
     background: rgb(247, 247, 247);
 }
-
 main.container {
     background: rgb(255, 255, 255);
     margin-top: 100px !important;
 }
-
 // Card
 .card {
     min-height: 250px;
 }
-
 // Text post
-.text-body {
+p, .text, .text-body {
     text-align: left !important;
     //copied from stackO
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     display: -webkit-box !important;
-    -webkit-line-clamp: 7 !important;
-    //number of lines to show 
-    -webkit-box-orient: vertical !important;
-    // Za ispis teksta kako je unet, da ne bude blok
-    white-space: pre-line !important;
-}
-.text {
-    text-align: left !important;
-    //copied from stackO
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 5 !important;
+    -webkit-line-clamp: 10 !important;
     //number of lines to show 
     -webkit-box-orient: vertical !important;
     // Za ispis teksta kako je unet, da ne bude blok
@@ -79,10 +65,6 @@ main.container {
 //     font-style: italic;
 //     line-height: 30% !important;
 //     margin-right: 10px;
-// }
-// .text-body {
-//     white-space: pre-line;
-//     word-break: break-all !important;
 // }
 .text-show {
     white-space: pre-line;
@@ -111,7 +93,6 @@ main.container {
     border-radius: 25px;
     border:  none;
 }
-
 // On top button
 #onTop {
     // float: right;
@@ -151,3 +132,6 @@ main.container {
 //     margin: auto !important;
 //     // color: white;
 // }
+.ck-ck-editor_main {
+    min-height: 250px;
+}

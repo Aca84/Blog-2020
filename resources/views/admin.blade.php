@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<h3 class="text-center">Admin dashboard</h3>
+<h3 class="text-center">Admin posts dashboard</h3>
 <hr>
 <h6 class="text-center">Ukupno {{$posts->total()}} post-a</h6>
 {{-- {{Auth::user()->email}} prikazuje samo za ulogovanog korisnika --}}
@@ -26,7 +26,8 @@
     {{-- Edit and Delete --}}
     <div class="mx-2 mb-1 bg-info rounded p-1">
         <a href="/posts/{{$post->id}}/edit" class="btn btn-light">Edit</a>
-        {!!Form::open(['action'=>['App\Http\Controllers\PostsController@destroy', $post->id,'id' => 'myForm'],'method'=>'POST', 'class'=>
+        {!!Form::open(['action'=>['App\Http\Controllers\PostsController@destroy', 
+            $post->id,'id' => 'myForm'],'method'=>'POST', 'class'=>
         'float-right'])!!}
         {{Form::hidden('_method', 'DELETE' )}}
         {{Form::submit('Delete', ['class'=> 'btn btn-danger'])}}

@@ -17,6 +17,10 @@ a {
   color: white;
 }
 
+.fa-search:hover {
+  color: #050505;
+}
+
 .footer {
   height: 100px !important;
 }
@@ -47,22 +51,14 @@ main.container {
   min-height: 250px;
 }
 
+p,
+.text,
 .text-body {
   text-align: left !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   display: -webkit-box !important;
-  -webkit-line-clamp: 7 !important;
-  -webkit-box-orient: vertical !important;
-  white-space: pre-line !important;
-}
-
-.text {
-  text-align: left !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 5 !important;
+  -webkit-line-clamp: 10 !important;
   -webkit-box-orient: vertical !important;
   white-space: pre-line !important;
 }
@@ -110,6 +106,10 @@ main.container {
 
 .back {
   font-size: 25px !important;
+}
+
+.ck-ck-editor_main {
+  min-height: 250px;
 }
 
 /*!

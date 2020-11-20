@@ -22,16 +22,20 @@ use Illuminate\Http\Request;
 //     return view('welcome');
 // });
 
- Route::get('/', 'App\Http\Controllers\PagesController@index');
- Route::get('/about', 'App\Http\Controllers\PagesController@about');
- Route::get('/user', 'App\Http\Controllers\PagesController@user');
+Route::get('/', 'App\Http\Controllers\PagesController@index');
+Route::get('/about', 'App\Http\Controllers\PagesController@about');
+//  Route::get('/user', 'App\Http\Controllers\UserController@index');
+//  Route::get('/user', 'App\Http\Controllers\PagesController@user');
 
- Route::resource('posts', 'App\Http\Controllers\PostsController');
- Auth::routes();
+Route::resource('posts', 'App\Http\Controllers\PostsController');
+Route::resource('user', 'App\Http\Controllers\UserController');
+
+Auth::routes();
  
 //  Route::get('/admin', 'App\Http\Controllers\Auth\LoginController@admin')->name('admin');
- Route::get('/admin', [App\Http\Controllers\Auth\LoginController::class, 'admin'])->name('admin'); 
- Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
- Route::get('/search', [App\Http\Controllers\PostsController::class, 'search'])->name('search');
+Route::get('/user', [App\Http\Controllers\UserController::class, 'index'])->name('user');
+Route::get('/admin', [App\Http\Controllers\Auth\LoginController::class, 'admin'])->name('admin'); 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/search', [App\Http\Controllers\PostsController::class, 'search'])->name('search');
 
 

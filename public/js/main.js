@@ -31,7 +31,6 @@ function goToTop(){
     // }
 }
 
-
 // CKEditor
 ClassicEditor
 //     .create( document.querySelector( '#editor' ) )

@@ -10,7 +10,6 @@
     <!-- Scripts -->
     <script src="{{ asset('/js/app.js') }}" defer></script>
     <script src="{{ asset('/js/tinymce/tinymce.min.js') }}"></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -19,22 +18,17 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     {{-- <link href="{{ asset('sass/custom.scss') }}" rel="stylesheet"> --}}
-
     {{-- CKEditor --}}
     <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
 </head>
 
 <body>
-    {{-- button for return on top of page --}}
-    <div onclick="goToTop()" id="onTop">
-        <i class="fas fa-hand-point-up"></i>
-    </div>
-    {{-- Error  messages
-    <div class="msgs">
-        @include('include/messages')
-    </div> --}}
-    <div id="app">
-      
+{{-- button for return on top of page --}}
+<div onclick="goToTop()" id="onTop">
+    <i class="fas fa-hand-point-up"></i>
+</div>
+
+    <div id="app">  
         <div class="container">
             @include('include/navbar')
                 {{-- Error  messages --}}
@@ -46,7 +40,6 @@
                 </main>
             @include('include/footer')
         </div>
-
     </div>
     {{-- Js file import --}}
     <script src="{{ asset('/js/main.js') }}"></script>

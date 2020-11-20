@@ -14,7 +14,8 @@
     <div class="form-group">  
         {{Form::label('body', 'Body')}}  
     {{-- <div id="editor"> --}}
-        {{Form::textarea('body','',['id'=>'editor','class'=>'form-control','placeholder'=>'Body text', 'w-70'])}} 
+        {{Form::textarea('body','',
+        ['id'=>'editor','class'=>'form-control','placeholder'=>'Body text', 'w-70'])}} 
     {{-- </div>  --}}
     </div>
         {{Form::submit('Publish!',['class'=>'btn btn-outline-success w-25 float-right'])}}    

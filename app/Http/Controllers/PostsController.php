@@ -26,9 +26,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Posts::orderBy('created_at','desc')->paginate(5);
+        // $posts = Posts::orderBy('created_at','desc')->paginate(5);
+        $posts = Posts::latest()->paginate(5);
         return view('posts.index')->with('posts', $posts);
     }
+    //**   ------------------ --**---------- */
     // ** function for searching the posts **//
     public function search(Request $request){
 
@@ -114,7 +116,7 @@ class PostsController extends Controller
             'body' => 'required'
         ]);
         
-        //Create post
+        //Create post - update
         $post = Posts::find($id);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
@@ -141,7 +143,7 @@ class PostsController extends Controller
         }
         // Check if it logged user auth old
         if(Auth::user()->id !== $post->user_id){  //new way with auth included up
-            return redirect('/posts')->with('error', 'no no no');
+            return redirect('/posts')->with('error', 'no no no dont do no no');
         }
         $post->delete();
         return redirect('/posts')->with('success','Post deleted');

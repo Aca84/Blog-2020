@@ -13,7 +13,6 @@
     </a>
 @endif
 
-
 <div class="card my-3 shadow" style="max-width: 100%;">
     <div class="card-header bg-transparent">
         <h3>{{$post->title}}</h3>

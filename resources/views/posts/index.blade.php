@@ -11,16 +11,18 @@
             </div>
             {{-- Post body --}}
             <div class="text p-3 text-justify" style="max-width: 100%;" id="body-text">
-              <p class="text-body" id="body-text"> 
+              <p class="text-body"> 
                 {!! $post->body !!}
               </p>
               <a href="/posts/{{$post->id}}">Read more</a>         
             </div>
-            <small class="text-muted my-2 p-3">by {{$post->user['name']}} on {{$post->created_at->format('d-m-yy H:i')}}</small>
-          </div>
+            <small class="text-muted my-2 p-3">by {{$post->user['name']}} 
+              on {{$post->created_at->format('d-m-yy H:i')}} </small> 
+          </div> 
         @endforeach
-          {{-- Pagination --}}
-          <div class="pagination justify-content-center">{{$posts->links()}}</div>     
+
+        {{-- Pagination --}}
+        <div class="pagination justify-content-center">{{$posts->links()}}</div>     
     @else
        <p><i>No posts for now</i></p>     
     @endif
