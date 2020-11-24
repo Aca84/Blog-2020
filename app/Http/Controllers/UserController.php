@@ -26,7 +26,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $user = User::latest()->get();
+        $user = User::latest()->paginate(10);
         if (Auth::user()->role == 'admin') {
             return view('pages.user')->with('user', $user);
         }
@@ -43,7 +43,7 @@ class UserController extends Controller
         $user = User::find($id);
 
         if (Auth::user()->role == 'admin') {
-            
+
             $user->delete();
             return redirect('/user')->with('success','Admin deleted the Post');
         }

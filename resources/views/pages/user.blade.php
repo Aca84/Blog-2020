@@ -11,6 +11,7 @@
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Joined</th>
+            <th scope="col">Role</th>
             <th scope="col">Banned?</th>
             <th scope="col">delete</th>
         </tr>
@@ -23,6 +24,7 @@
             <td>{{$u->name}}</td>
             <td>{{$u->email}}</td>
             <td>{{$u->created_at->format('d-m-yy H:i')}}</td>
+            <td>{{$u->role}}</td>
             <td>
                 <input type="date" id="ban" class="form-control w-75" >
             </td>
@@ -40,5 +42,6 @@
         {{-- @endfor --}}
         </tbody>
     </table>
+    <div class="pagination justify-content-center">{{$user->links()}}</div>
 </div>
 @endsection
