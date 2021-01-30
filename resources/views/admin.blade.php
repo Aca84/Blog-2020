@@ -1,5 +1,10 @@
 @extends('layouts.app')
 @section('content')
+{{-- current date and time in .. --}}
+{{
+    now()->setTimezone('Europe/Belgrade')->format('d-m-yy H:i')
+}}
+
 
 <h3 class="text-center">Admin posts dashboard</h3>
 <hr>

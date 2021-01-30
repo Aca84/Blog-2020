@@ -45,7 +45,7 @@ class UserController extends Controller
         if (Auth::user()->role == 'admin') {
 
             $user->delete();
-            return redirect('/user')->with('success','Admin deleted the Post');
+            return redirect('/user')->with('success','User deleted');
         }
     }
     
