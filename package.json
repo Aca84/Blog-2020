@@ -13,12 +13,12 @@
         "@ckeditor/ckeditor5-alignment": "^23.1.0",
         "@tailwindcss/ui": "^0.3",
         "autoprefixer": "^9.6",
-        "axios": "^0.19",
+        "axios": "^0.21.1",
         "bootstrap": "^4.5.2",
         "cross-env": "^7.0",
         "jquery": "^3.2",
         "laravel-mix": "^5.0.1",
-        "lodash": "^4.17.19",
+        "lodash": "^4.17.21",
         "popper.js": "^1.12",
         "postcss-import": "^12.0",
         "postcss-nested": "^4.2",
@@ -34,6 +34,6 @@
         "bootstrap-icons": "^1.0.0",
         "font-awesome-icons": "^1.6.0",
         "object-path": "^0.11.5",
-        "tinymce": "^5.5.1"
+        "tinymce": "^5.8.0"
     }
 }
